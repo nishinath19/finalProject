@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Crudcontroller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('main_page');
 });
+
+
+Route::get('/add_product',[Crudcontroller::class,'get_data']);
+
+Route::get('/product/{id}', 'ProductController@show');
+
+
+Route::get('/products', function () {
+    return view('products');
+});
+
