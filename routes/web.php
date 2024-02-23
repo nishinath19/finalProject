@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Crudcontroller;
+use App\Http\Controllers\StockController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,16 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('main_page');
+    return redirect('/stocks');
 });
 
+Route::resource('stocks', StockController::class);
 
-Route::get('/add_product',[Crudcontroller::class,'get_data']);
-
-Route::get('/product/{id}', 'ProductController@show');
-
-
-Route::get('/products', function () {
-    return view('products');
-});
 
