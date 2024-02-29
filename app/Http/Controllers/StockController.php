@@ -57,6 +57,6 @@ class StockController extends Controller
     public function destroy(Stock $stock)
     {
         $stock->delete();
-        return redirect()->route('stocks.index')->with('success','Student deleted successfully.');
+        return redirect()->route('stocks.index')->with('success','Product deleted successfully.');
     }
 }

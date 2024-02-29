@@ -4,7 +4,7 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="text-center">Simple Stock Management Application | BH</h2>
+            <h2 class="text-center">Product Management Application | KSS</h2>
         </div>
         <div class="col-lg-12 text-center" style="margin-top:10px;margin-bottom: 10px;">
             <a class="btn btn-success " href="{{ route('stocks.create') }}"> Add Stock</a>
@@ -19,12 +19,12 @@
 
     @if(sizeof($stocks) > 0)
         <table class="table table-bordered">
-            <tr>
+            <tr >
                 <th>No</th>
                 <th>Product Name</th>
                 <th>Product Description</th>
                 <th>Qty.</th>
-                <th width="280px">More</th>
+                <th width="280px" >More</th>
             </tr>
             @foreach ($stocks as $stock)
                 <tr>
